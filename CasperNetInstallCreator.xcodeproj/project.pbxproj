@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012151F1194FE3E3008564F4 /* Wallpaper.app in Resources */ = {isa = PBXBuildFile; fileRef = 012151F0194FE3E3008564F4 /* Wallpaper.app */; };
+		01B6A2DD19477F770016CCBD /* LaunchAgents.10.9 in Resources */ = {isa = PBXBuildFile; fileRef = 01B6A2DB19477F770016CCBD /* LaunchAgents.10.9 */; };
+		01B6A2DE19477F770016CCBD /* LaunchDaemons.10.9 in Resources */ = {isa = PBXBuildFile; fileRef = 01B6A2DC19477F770016CCBD /* LaunchDaemons.10.9 */; };
+		01B6A2DF19477F920016CCBD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DBA18DB3E9B00FDF8B8 /* MainMenu.xib */; };
+		01DBD2BA18F358D9004F43AF /* rc.cdrom.postWS.LaunchPad in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2AE18F34CFC004F43AF /* rc.cdrom.postWS.LaunchPad */; };
+		01DBD2BB18F358D9004F43AF /* rc.cdrom.postWS.ShutDown in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2AF18F34CFC004F43AF /* rc.cdrom.postWS.ShutDown */; };
+		01DBD2BC18F358D9004F43AF /* rc.cdrom.postWS.Terminal in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */; };
+		01DBD2BD18F358D9004F43AF /* rc.cdrom in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2A818F34C3F004F43AF /* rc.cdrom */; };
+		01DBD2BE18F358D9004F43AF /* rc.cdrom.preWS in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */; };
+		01DBD2BF18F358D9004F43AF /* rc.install in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2AA18F34C3F004F43AF /* rc.install */; };
+		01DBD2C118F35DE2004F43AF /* NetInstall LaunchPad.app in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */; };
+		75BD7A4018EAFF5200F93BE1 /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BD7A3F18EAFF5200F93BE1 /* OS.m */; };
+		75BD7A4318EB00A200F93BE1 /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BD7A4218EB00A200F93BE1 /* Shell.m */; };
+		75CC2DA618DB3E9B00FDF8B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC2DA518DB3E9B00FDF8B8 /* Cocoa.framework */; };
+		75CC2DB018DB3E9B00FDF8B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DAE18DB3E9B00FDF8B8 /* InfoPlist.strings */; };
+		75CC2DB218DB3E9B00FDF8B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2DB118DB3E9B00FDF8B8 /* main.m */; };
+		75CC2DB918DB3E9B00FDF8B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2DB818DB3E9B00FDF8B8 /* AppDelegate.m */; };
+		75CC2DBE18DB3E9B00FDF8B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DBD18DB3E9B00FDF8B8 /* Images.xcassets */; };
+		75CC2DC518DB3E9C00FDF8B8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC2DC418DB3E9C00FDF8B8 /* XCTest.framework */; };
+		75CC2DC618DB3E9C00FDF8B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC2DA518DB3E9B00FDF8B8 /* Cocoa.framework */; };
+		75CC2DCE18DB3E9C00FDF8B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DCC18DB3E9C00FDF8B8 /* InfoPlist.strings */; };
+		75CC2DD018DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2DCF18DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.m */; };
+		75CC2DE218DB95C200FDF8B8 /* AdvancedPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2DE118DB95C200FDF8B8 /* AdvancedPanel.m */; };
+		75CC2DE418DC781C00FDF8B8 /* CasperSuiteDesktop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DE318DC781C00FDF8B8 /* CasperSuiteDesktop.jpg */; };
+		75CC2DE618DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DE518DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns */; };
+		75CC2DE918DC81DC00FDF8B8 /* CasperNetinstallOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2DE818DC81DC00FDF8B8 /* CasperNetinstallOptions.m */; };
+		75CC2DEB18DCB29B00FDF8B8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC2DEA18DCB29B00FDF8B8 /* WebKit.framework */; };
+		75CC2DEE18DCBF0100FDF8B8 /* Creator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2DED18DCBF0100FDF8B8 /* Creator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75CC2DC718DB3E9C00FDF8B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CC2D9A18DB3E9B00FDF8B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75CC2DA118DB3E9B00FDF8B8;
+			remoteInfo = CapserNetInstallCreator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012151F0194FE3E3008564F4 /* Wallpaper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Wallpaper.app; sourceTree = "<group>"; };
+		01B6A2DB19477F770016CCBD /* LaunchAgents.10.9 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchAgents.10.9; sourceTree = "<group>"; };
+		01B6A2DC19477F770016CCBD /* LaunchDaemons.10.9 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchDaemons.10.9; sourceTree = "<group>"; };
+		01DBD2A818F34C3F004F43AF /* rc.cdrom */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.cdrom; path = CasperNetInstallCreator/rc.cdrom; sourceTree = SOURCE_ROOT; };
+		01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.cdrom.preWS; path = CasperNetInstallCreator/rc.cdrom.preWS; sourceTree = SOURCE_ROOT; };
+		01DBD2AA18F34C3F004F43AF /* rc.install */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.install; path = CasperNetInstallCreator/rc.install; sourceTree = SOURCE_ROOT; };
+		01DBD2AE18F34CFC004F43AF /* rc.cdrom.postWS.LaunchPad */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.LaunchPad; sourceTree = "<group>"; };
+		01DBD2AF18F34CFC004F43AF /* rc.cdrom.postWS.ShutDown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.ShutDown; sourceTree = "<group>"; };
+		01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.Terminal; sourceTree = "<group>"; };
+		01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "NetInstall LaunchPad.app"; sourceTree = "<group>"; };
+		75BD7A3E18EAFF5200F93BE1 /* OS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OS.h; path = ../OS.h; sourceTree = "<group>"; };
+		75BD7A3F18EAFF5200F93BE1 /* OS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OS.m; path = ../OS.m; sourceTree = "<group>"; };
+		75BD7A4118EB00A200F93BE1 /* Shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shell.h; path = ../Shell.h; sourceTree = "<group>"; };
+		75BD7A4218EB00A200F93BE1 /* Shell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shell.m; path = ../Shell.m; sourceTree = "<group>"; };
+		75CC2DA218DB3E9B00FDF8B8 /* Casper NetInstall Image Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Casper NetInstall Image Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75CC2DA518DB3E9B00FDF8B8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		75CC2DA818DB3E9B00FDF8B8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		75CC2DA918DB3E9B00FDF8B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		75CC2DAA18DB3E9B00FDF8B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75CC2DAD18DB3E9B00FDF8B8 /* CasperNetInstallCreator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CasperNetInstallCreator-Info.plist"; sourceTree = "<group>"; };
+		75CC2DAF18DB3E9B00FDF8B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75CC2DB118DB3E9B00FDF8B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75CC2DB318DB3E9B00FDF8B8 /* CasperNetInstallCreator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CasperNetInstallCreator-Prefix.pch"; sourceTree = "<group>"; };
+		75CC2DB718DB3E9B00FDF8B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		75CC2DB818DB3E9B00FDF8B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		75CC2DBB18DB3E9B00FDF8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		75CC2DBD18DB3E9B00FDF8B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		75CC2DC318DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasperNetInstallCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75CC2DC418DB3E9C00FDF8B8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		75CC2DCB18DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CasperNetInstallCreatorTests-Info.plist"; sourceTree = "<group>"; };
+		75CC2DCD18DB3E9C00FDF8B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75CC2DCF18DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CasperNetInstallCreatorTests.m; sourceTree = "<group>"; };
+		75CC2DE018DB95C200FDF8B8 /* AdvancedPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvancedPanel.h; path = ../AdvancedPanel.h; sourceTree = "<group>"; };
+		75CC2DE118DB95C200FDF8B8 /* AdvancedPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdvancedPanel.m; path = ../AdvancedPanel.m; sourceTree = "<group>"; };
+		75CC2DE318DC781C00FDF8B8 /* CasperSuiteDesktop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CasperSuiteDesktop.jpg; sourceTree = "<group>"; };
+		75CC2DE518DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CasperNetInstallImageCreator.icns; sourceTree = "<group>"; };
+		75CC2DE718DC81DC00FDF8B8 /* CasperNetinstallOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasperNetinstallOptions.h; sourceTree = "<group>"; };
+		75CC2DE818DC81DC00FDF8B8 /* CasperNetinstallOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasperNetinstallOptions.m; sourceTree = "<group>"; };
+		75CC2DEA18DCB29B00FDF8B8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		75CC2DEC18DCBF0100FDF8B8 /* Creator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creator.h; sourceTree = "<group>"; };
+		75CC2DED18DCBF0100FDF8B8 /* Creator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Creator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75CC2D9F18DB3E9B00FDF8B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CC2DEB18DCB29B00FDF8B8 /* WebKit.framework in Frameworks */,
+				75CC2DA618DB3E9B00FDF8B8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75CC2DC018DB3E9C00FDF8B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CC2DC618DB3E9C00FDF8B8 /* Cocoa.framework in Frameworks */,
+				75CC2DC518DB3E9C00FDF8B8 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75CC2D9918DB3E9B00FDF8B8 = {
+			isa = PBXGroup;
+			children = (
+				75CC2DAB18DB3E9B00FDF8B8 /* CasperNetInstallCreator */,
+				75CC2DC918DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests */,
+				75CC2DA418DB3E9B00FDF8B8 /* Frameworks */,
+				75CC2DA318DB3E9B00FDF8B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75CC2DA318DB3E9B00FDF8B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75CC2DA218DB3E9B00FDF8B8 /* Casper NetInstall Image Creator.app */,
+				75CC2DC318DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75CC2DA418DB3E9B00FDF8B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75CC2DEA18DCB29B00FDF8B8 /* WebKit.framework */,
+				75CC2DA518DB3E9B00FDF8B8 /* Cocoa.framework */,
+				75CC2DC418DB3E9C00FDF8B8 /* XCTest.framework */,
+				75CC2DA718DB3E9B00FDF8B8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75CC2DA718DB3E9B00FDF8B8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75CC2DA818DB3E9B00FDF8B8 /* AppKit.framework */,
+				75CC2DA918DB3E9B00FDF8B8 /* CoreData.framework */,
+				75CC2DAA18DB3E9B00FDF8B8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		75CC2DAB18DB3E9B00FDF8B8 /* CasperNetInstallCreator */ = {
+			isa = PBXGroup;
+			children = (
+				75CC2DE018DB95C200FDF8B8 /* AdvancedPanel.h */,
+				75CC2DE118DB95C200FDF8B8 /* AdvancedPanel.m */,
+				75CC2DB718DB3E9B00FDF8B8 /* AppDelegate.h */,
+				75CC2DB818DB3E9B00FDF8B8 /* AppDelegate.m */,
+				75CC2DE718DC81DC00FDF8B8 /* CasperNetinstallOptions.h */,
+				75CC2DE818DC81DC00FDF8B8 /* CasperNetinstallOptions.m */,
+				75CC2DEC18DCBF0100FDF8B8 /* Creator.h */,
+				75CC2DED18DCBF0100FDF8B8 /* Creator.m */,
+				75BD7A3E18EAFF5200F93BE1 /* OS.h */,
+				75BD7A3F18EAFF5200F93BE1 /* OS.m */,
+				75BD7A4118EB00A200F93BE1 /* Shell.h */,
+				75BD7A4218EB00A200F93BE1 /* Shell.m */,
+				75CC2DBA18DB3E9B00FDF8B8 /* MainMenu.xib */,
+				75CC2DBD18DB3E9B00FDF8B8 /* Images.xcassets */,
+				75CC2DAC18DB3E9B00FDF8B8 /* Supporting Files */,
+			);
+			path = CasperNetInstallCreator;
+			sourceTree = SOURCE_ROOT;
+		};
+		75CC2DAC18DB3E9B00FDF8B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				012151F0194FE3E3008564F4 /* Wallpaper.app */,
+				01B6A2DB19477F770016CCBD /* LaunchAgents.10.9 */,
+				01B6A2DC19477F770016CCBD /* LaunchDaemons.10.9 */,
+				01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */,
+				01DBD2AE18F34CFC004F43AF /* rc.cdrom.postWS.LaunchPad */,
+				01DBD2AF18F34CFC004F43AF /* rc.cdrom.postWS.ShutDown */,
+				01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */,
+				01DBD2A818F34C3F004F43AF /* rc.cdrom */,
+				01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */,
+				01DBD2AA18F34C3F004F43AF /* rc.install */,
+				75CC2DE518DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns */,
+				75CC2DE318DC781C00FDF8B8 /* CasperSuiteDesktop.jpg */,
+				75CC2DAD18DB3E9B00FDF8B8 /* CasperNetInstallCreator-Info.plist */,
+				75CC2DAE18DB3E9B00FDF8B8 /* InfoPlist.strings */,
+				75CC2DB118DB3E9B00FDF8B8 /* main.m */,
+				75CC2DB318DB3E9B00FDF8B8 /* CasperNetInstallCreator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = CasperNetInstallCreator;
+			sourceTree = SOURCE_ROOT;
+		};
+		75CC2DC918DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				75CC2DCF18DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.m */,
+				75CC2DCA18DB3E9C00FDF8B8 /* Supporting Files */,
+			);
+			path = CasperNetInstallCreatorTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		75CC2DCA18DB3E9C00FDF8B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75CC2DCB18DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests-Info.plist */,
+				75CC2DCC18DB3E9C00FDF8B8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75CC2DA118DB3E9B00FDF8B8 /* Casper NetInstall Image Creator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75CC2DD318DB3E9C00FDF8B8 /* Build configuration list for PBXNativeTarget "Casper NetInstall Image Creator" */;
+			buildPhases = (
+				75CC2D9E18DB3E9B00FDF8B8 /* Sources */,
+				75CC2D9F18DB3E9B00FDF8B8 /* Frameworks */,
+				75CC2DA018DB3E9B00FDF8B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Casper NetInstall Image Creator";
+			productName = CapserNetInstallCreator;
+			productReference = 75CC2DA218DB3E9B00FDF8B8 /* Casper NetInstall Image Creator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75CC2DC218DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75CC2DD618DB3E9C00FDF8B8 /* Build configuration list for PBXNativeTarget "CasperNetInstallCreatorTests" */;
+			buildPhases = (
+				75CC2DBF18DB3E9C00FDF8B8 /* Sources */,
+				75CC2DC018DB3E9C00FDF8B8 /* Frameworks */,
+				75CC2DC118DB3E9C00FDF8B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75CC2DC818DB3E9C00FDF8B8 /* PBXTargetDependency */,
+			);
+			name = CasperNetInstallCreatorTests;
+			productName = CapserNetInstallCreatorTests;
+			productReference = 75CC2DC318DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75CC2D9A18DB3E9B00FDF8B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "JAMF Software";
+				TargetAttributes = {
+					75CC2DC218DB3E9C00FDF8B8 = {
+						TestTargetID = 75CC2DA118DB3E9B00FDF8B8;
+					};
+				};
+			};
+			buildConfigurationList = 75CC2D9D18DB3E9B00FDF8B8 /* Build configuration list for PBXProject "CasperNetInstallCreator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75CC2D9918DB3E9B00FDF8B8;
+			productRefGroup = 75CC2DA318DB3E9B00FDF8B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75CC2DA118DB3E9B00FDF8B8 /* Casper NetInstall Image Creator */,
+				75CC2DC218DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75CC2DA018DB3E9B00FDF8B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B6A2DF19477F920016CCBD /* MainMenu.xib in Resources */,
+				012151F1194FE3E3008564F4 /* Wallpaper.app in Resources */,
+				01DBD2BA18F358D9004F43AF /* rc.cdrom.postWS.LaunchPad in Resources */,
+				01DBD2BB18F358D9004F43AF /* rc.cdrom.postWS.ShutDown in Resources */,
+				01DBD2BC18F358D9004F43AF /* rc.cdrom.postWS.Terminal in Resources */,
+				01B6A2DE19477F770016CCBD /* LaunchDaemons.10.9 in Resources */,
+				01DBD2BD18F358D9004F43AF /* rc.cdrom in Resources */,
+				01DBD2BE18F358D9004F43AF /* rc.cdrom.preWS in Resources */,
+				01B6A2DD19477F770016CCBD /* LaunchAgents.10.9 in Resources */,
+				01DBD2C118F35DE2004F43AF /* NetInstall LaunchPad.app in Resources */,
+				01DBD2BF18F358D9004F43AF /* rc.install in Resources */,
+				75CC2DB018DB3E9B00FDF8B8 /* InfoPlist.strings in Resources */,
+				75CC2DE618DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns in Resources */,
+				75CC2DE418DC781C00FDF8B8 /* CasperSuiteDesktop.jpg in Resources */,
+				75CC2DBE18DB3E9B00FDF8B8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75CC2DC118DB3E9C00FDF8B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CC2DCE18DB3E9C00FDF8B8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75CC2D9E18DB3E9B00FDF8B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CC2DEE18DCBF0100FDF8B8 /* Creator.m in Sources */,
+				75CC2DE918DC81DC00FDF8B8 /* CasperNetinstallOptions.m in Sources */,
+				75BD7A4318EB00A200F93BE1 /* Shell.m in Sources */,
+				75CC2DB918DB3E9B00FDF8B8 /* AppDelegate.m in Sources */,
+				75BD7A4018EAFF5200F93BE1 /* OS.m in Sources */,
+				75CC2DE218DB95C200FDF8B8 /* AdvancedPanel.m in Sources */,
+				75CC2DB218DB3E9B00FDF8B8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75CC2DBF18DB3E9C00FDF8B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CC2DD018DB3E9C00FDF8B8 /* CasperNetInstallCreatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75CC2DC818DB3E9C00FDF8B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75CC2DA118DB3E9B00FDF8B8 /* Casper NetInstall Image Creator */;
+			targetProxy = 75CC2DC718DB3E9C00FDF8B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75CC2DAE18DB3E9B00FDF8B8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75CC2DAF18DB3E9B00FDF8B8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75CC2DBA18DB3E9B00FDF8B8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75CC2DBB18DB3E9B00FDF8B8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		75CC2DCC18DB3E9C00FDF8B8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75CC2DCD18DB3E9C00FDF8B8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75CC2DD118DB3E9C00FDF8B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		75CC2DD218DB3E9C00FDF8B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		75CC2DD418DB3E9C00FDF8B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CasperNetInstallCreator/CasperNetInstallCreator-Prefix.pch";
+				INFOPLIST_FILE = "CasperNetInstallCreator/CasperNetInstallCreator-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Casper NetInstall Image Creator";
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75CC2DD518DB3E9C00FDF8B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CasperNetInstallCreator/CasperNetInstallCreator-Prefix.pch";
+				INFOPLIST_FILE = "CasperNetInstallCreator/CasperNetInstallCreator-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "Casper NetInstall Image Creator";
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		75CC2DD718DB3E9C00FDF8B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CapserNetInstallCreator.app/Contents/MacOS/CapserNetInstallCreator";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CapserNetInstallCreator/CapserNetInstallCreator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CapserNetInstallCreatorTests/CasperNetInstallCreatorTests-Info.plist";
+				PRODUCT_NAME = CasperNetInstallCreatorTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		75CC2DD818DB3E9C00FDF8B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CapserNetInstallCreator.app/Contents/MacOS/CapserNetInstallCreator";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CapserNetInstallCreator/CapserNetInstallCreator-Prefix.pch";
+				INFOPLIST_FILE = "CapserNetInstallCreatorTests/CasperNetInstallCreatorTests-Info.plist";
+				PRODUCT_NAME = CasperNetInstallCreatorTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75CC2D9D18DB3E9B00FDF8B8 /* Build configuration list for PBXProject "CasperNetInstallCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75CC2DD118DB3E9C00FDF8B8 /* Debug */,
+				75CC2DD218DB3E9C00FDF8B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75CC2DD318DB3E9C00FDF8B8 /* Build configuration list for PBXNativeTarget "Casper NetInstall Image Creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75CC2DD418DB3E9C00FDF8B8 /* Debug */,
+				75CC2DD518DB3E9C00FDF8B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75CC2DD618DB3E9C00FDF8B8 /* Build configuration list for PBXNativeTarget "CasperNetInstallCreatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75CC2DD718DB3E9C00FDF8B8 /* Debug */,
+				75CC2DD818DB3E9C00FDF8B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75CC2D9A18DB3E9B00FDF8B8 /* Project object */;
+}

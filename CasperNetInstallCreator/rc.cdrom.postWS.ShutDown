@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Draw the Desktop Background
+if [ -e /System/Library/CoreServices/Dock.app/Contents/Resources/LoginDesktopPicture ]; then
+	/System/Library/CoreServices/Dock.app/Contents/Resources/LoginDesktopPicture
+fi
+
+# Install Blank Apple Package to "Warm Up" Installer for Casper Imaging
+/usr/sbin/installer -pkg /Library/Application\ Support/JAMF/NetBoot.pkg -target /private/tmp/
+
+# Launch Casper
+/Applications/%@/Contents/MacOS/%@
+
+
+sh
+
+shutdown -h now

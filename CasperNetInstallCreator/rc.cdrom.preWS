@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# configd loads /S/L/SystemConfiguration/*.bundle
+#/usr/sbin/configd
+
+# Make sure the local disks are mounted
+theDisks=`ls /dev/disk* | grep -v disk[0-9]s[0-9]`
+echo "Mounting local disks..."
+for disk in $theDisks
+do
+	/usr/sbin/diskutil mount $disk 2>&1 | tee /dev/console | $log
+done

@@ -1,0 +1,107 @@
+#!/bin/sh
+# Copyright 2000-2009, Apple Inc.
+
+#
+#
+# NOTICE! 
+# Most of rc.cdrom is in rc.install temporarily while portions are migrated to launchd
+#
+#
+
+#
+# Disable prebinding-on-the-fly while we're CD booted
+#
+export DYLD_NO_FIX_PREBINDING=1
+
+#
+# mount root_device to update vnode information
+#
+mount -u -o ro /
+
+#
+# Sanity check date & time. Pin to 4/1/1976.
+#
+if [ `date +%s` -lt 197193600 ]; then
+  date 040100001976
+fi
+
+#
+# Create a RAM disk with same perms as mountpoint
+#
+RAMDisk()
+{
+  mntpt="$1"
+  rdsize="$2"
+  echo "Creating RAM Disk for $mntpt"
+  dev=`hdik -drivekey system-image=yes -nomount ram://$rdsize`
+  if [ $? -eq 0 ] ; then
+    newfs_hfs $dev
+    # save & restore fs permissions covered by the mount
+    eval `/usr/bin/stat -s "$mntpt"`
+    mount -t hfs -o union -o nobrowse $dev "$mntpt"
+    chown $st_uid:$st_gid "$mntpt"
+    chmod $st_mode "$mntpt"
+  fi
+}
+
+RAMDisk /Volumes 1024
+RAMDisk /tmp 8192
+RAMDisk /etc 1024
+RAMDisk /System/Installation 1024
+RAMDisk /System/Library/Caches 16384
+RAMDisk /System/Library/Caches/com.apple.kext.caches/Startup 32768
+RAMDisk /var/log/ 8192
+RAMDisk /var/folders 12288
+RAMDisk /var/tmp 2048
+RAMDisk /var/run 2048
+RAMDisk /var/db 16384
+# The following RAMDisk is created so that Casper Imaging knows that the client is net$
+RAMDisk /var/netboot 2048
+# language prefs -- read only until needed
+RAMDisk /Library/Caches 8192
+RAMDisk /Library/Preferences 1024
+RAMDisk /Library/Preferences/SystemConfiguration 1024
+RAMDisk /Library/ColorSync/Profiles/Displays 2048
+RAMDisk '/Library/Application Support' 16384
+RAMDisk /Library/Keychains 2048
+RAMDisk /var/root 8192
+
+/bin/chmod 777 /tmp
+
+mkdir /var/root/Library/Keychains
+mkdir -m 1777 /var/db/mds
+
+# use or create the boot cache playlist, and allow B&I to force 32-bit playlist generation
+FORCETHIRTYTWO="false"
+if nvram boot-args | grep "no64exec" ; then
+	FORCETHIRTYTWO="true"
+fi
+
+SIXTYFOURBIT=`sysctl -n hw.cpu64bit_capable`
+
+if [ $SIXTYFOURBIT = "0" -o $FORCETHIRTYTWO = "true" ] ; then
+	echo "using 32-bit bootcache playlist"
+	BootCacheControl -f /var/db/BootCache.playlist32 startmaybe 
+elif [ $SIXTYFOURBIT = "1" ] ; then
+	echo "using 64-bit bootcache playlist"
+	BootCacheControl -f /var/db/BootCache.playlist start
+fi
+
+# Set Computer Name from NetBoot Server
+computerName=$(ipconfig netbootoption machine_name 2>&1)
+if [ $? -ne 0 ]; then
+	echo "Error: Computer name could not be received from NetBoot server.  Setting to localhost."
+else
+	echo "Setting Computer Name to ${computerName}..."
+	/usr/sbin/scutil --set ComputerName "${computerName}"
+	/usr/sbin/scutil --set LocalHostName "${computerName}"
+fi
+
+# tell launchd to commence with loading the system.
+# for the OS Install environment only, /etc/rc.install is included in this process.
+launchctl load -D system
+
+# this script sleeps forever; the installer or startup disk will always reboot the system. 
+sleep 9999999
+
+

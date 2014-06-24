@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Draw the Desktop Background
+/Applications/Wallpaper.app/Contents/MacOS/Wallpaper &
+
+# Launch Casper
+/Applications/%@/Contents/MacOS/%@
+
+# Comment this line out if you do NOT want the Terminal launched after Casper quits (will restart instead)
+/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+
+sh
+
+shutdown -r now
