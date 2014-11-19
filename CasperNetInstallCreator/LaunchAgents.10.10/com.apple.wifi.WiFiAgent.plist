@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>Label</key>
+	<string>com.apple.wifi.WiFiAgent</string>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+		<key>Crashed</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.wifi.WiFiAgent</key>
+		<true/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+</dict>
+</plist>

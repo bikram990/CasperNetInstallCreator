@@ -18,6 +18,9 @@
 		01DBD2BE18F358D9004F43AF /* rc.cdrom.preWS in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */; };
 		01DBD2BF18F358D9004F43AF /* rc.install in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2AA18F34C3F004F43AF /* rc.install */; };
 		01DBD2C118F35DE2004F43AF /* NetInstall LaunchPad.app in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */; };
+		7511887919DB3F5000932564 /* LaunchAgents.10.10 in Resources */ = {isa = PBXBuildFile; fileRef = 7511887719DB3F5000932564 /* LaunchAgents.10.10 */; };
+		7511887A19DB3F5000932564 /* LaunchDaemons.10.10 in Resources */ = {isa = PBXBuildFile; fileRef = 7511887819DB3F5000932564 /* LaunchDaemons.10.10 */; };
+		7511887F19DC9A2C00932564 /* YosemiteOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511887E19DC9A2C00932564 /* YosemiteOS.m */; };
 		75BD7A4018EAFF5200F93BE1 /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BD7A3F18EAFF5200F93BE1 /* OS.m */; };
 		75BD7A4318EB00A200F93BE1 /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BD7A4218EB00A200F93BE1 /* Shell.m */; };
 		75CC2DA618DB3E9B00FDF8B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC2DA518DB3E9B00FDF8B8 /* Cocoa.framework */; };
@@ -58,6 +61,10 @@
 		01DBD2AF18F34CFC004F43AF /* rc.cdrom.postWS.ShutDown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.ShutDown; sourceTree = "<group>"; };
 		01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.Terminal; sourceTree = "<group>"; };
 		01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "NetInstall LaunchPad.app"; sourceTree = "<group>"; };
+		7511887719DB3F5000932564 /* LaunchAgents.10.10 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchAgents.10.10; sourceTree = "<group>"; };
+		7511887819DB3F5000932564 /* LaunchDaemons.10.10 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchDaemons.10.10; sourceTree = "<group>"; };
+		7511887D19DC9A2C00932564 /* YosemiteOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YosemiteOS.h; path = ../YosemiteOS.h; sourceTree = "<group>"; };
+		7511887E19DC9A2C00932564 /* YosemiteOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YosemiteOS.m; path = ../YosemiteOS.m; sourceTree = "<group>"; };
 		75BD7A3E18EAFF5200F93BE1 /* OS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OS.h; path = ../OS.h; sourceTree = "<group>"; };
 		75BD7A3F18EAFF5200F93BE1 /* OS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OS.m; path = ../OS.m; sourceTree = "<group>"; };
 		75BD7A4118EB00A200F93BE1 /* Shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shell.h; path = ../Shell.h; sourceTree = "<group>"; };
@@ -156,6 +163,8 @@
 		75CC2DAB18DB3E9B00FDF8B8 /* CasperNetInstallCreator */ = {
 			isa = PBXGroup;
 			children = (
+				7511887D19DC9A2C00932564 /* YosemiteOS.h */,
+				7511887E19DC9A2C00932564 /* YosemiteOS.m */,
 				75CC2DE018DB95C200FDF8B8 /* AdvancedPanel.h */,
 				75CC2DE118DB95C200FDF8B8 /* AdvancedPanel.m */,
 				75CC2DB718DB3E9B00FDF8B8 /* AppDelegate.h */,
@@ -178,6 +187,8 @@
 		75CC2DAC18DB3E9B00FDF8B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7511887719DB3F5000932564 /* LaunchAgents.10.10 */,
+				7511887819DB3F5000932564 /* LaunchDaemons.10.10 */,
 				012151F0194FE3E3008564F4 /* Wallpaper.app */,
 				01B6A2DB19477F770016CCBD /* LaunchAgents.10.9 */,
 				01B6A2DC19477F770016CCBD /* LaunchDaemons.10.9 */,
@@ -304,8 +315,10 @@
 				01B6A2DD19477F770016CCBD /* LaunchAgents.10.9 in Resources */,
 				01DBD2C118F35DE2004F43AF /* NetInstall LaunchPad.app in Resources */,
 				01DBD2BF18F358D9004F43AF /* rc.install in Resources */,
+				7511887A19DB3F5000932564 /* LaunchDaemons.10.10 in Resources */,
 				75CC2DB018DB3E9B00FDF8B8 /* InfoPlist.strings in Resources */,
 				75CC2DE618DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns in Resources */,
+				7511887919DB3F5000932564 /* LaunchAgents.10.10 in Resources */,
 				75CC2DE418DC781C00FDF8B8 /* CasperSuiteDesktop.jpg in Resources */,
 				75CC2DBE18DB3E9B00FDF8B8 /* Images.xcassets in Resources */,
 			);
@@ -326,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7511887F19DC9A2C00932564 /* YosemiteOS.m in Sources */,
 				75CC2DEE18DCBF0100FDF8B8 /* Creator.m in Sources */,
 				75CC2DE918DC81DC00FDF8B8 /* CasperNetinstallOptions.m in Sources */,
 				75BD7A4318EB00A200F93BE1 /* Shell.m in Sources */,

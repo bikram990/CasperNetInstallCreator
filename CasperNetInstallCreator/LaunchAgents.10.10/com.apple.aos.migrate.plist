@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.aos.migrate</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.aos.migrate</key>
+		<true/>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+	</array>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/AOSMigrateAgent</string>
+</dict>
+</plist>

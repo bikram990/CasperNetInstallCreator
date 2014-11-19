@@ -8,6 +8,7 @@
 
 #import "../Shell.h"
 #import "../OS.h"
+#import "../YosemiteOS.h"
 
 @implementation Creator
 
@@ -119,6 +120,11 @@
             [self updateProgressText:@"Adding Trust for the JSS CA Cert..."];
             
             [Shell execute:[NSString stringWithFormat:@"/usr/bin/curl -k -o /private/tmp/jamf_ca.cer %@/CA/SCEP?operation=getcacert", options.jssAddress]];
+            
+            // here is the time to check if the Admin.plist exists already or not
+            if(![[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/Library/Security/Trust Settings/Admin.plist", self.mountPath]]){
+                [Shell execute:[NSString stringWithFormat:@"/usr/bin/touch '%@/Library/Security/Trust Settings/Admin.plist' ", self.mountPath]];
+            }
             [Shell execute:[NSString stringWithFormat:@"/usr/bin/security add-trusted-cert -r trustRoot -k '%@/Library/Keychains/System.keychain' -i '%@/Library/Security/Trust Settings/Admin.plist' -o '%@/Library/Security/Trust Settings/Admin.plist' /private/tmp/jamf_ca.cer", self.mountPath, self.mountPath, self.mountPath]];
             
         }
@@ -180,7 +186,7 @@
     
     //Kernel Cache
     [Shell execute:[NSString stringWithFormat:@"/bin/mkdir -p -m 755 %@/i386/x86_64", self.nbiFolderRoot]];
-    [Shell execute:[NSString stringWithFormat:@"/usr/sbin/kextcache -a x86_64 -N -z -K %@/mach_kernel -c %@/i386/x86_64/kernelcache '%@/System/Library/Extensions'", self.mountPath, self.nbiFolderRoot, self.mountPath]];
+    [Shell execute:[NSString stringWithFormat:@"/usr/sbin/kextcache -a x86_64 -N -z -K %@%@ -c %@/i386/x86_64/kernelcache '%@/System/Library/Extensions'", self.mountPath, self.os.kernelPath, self.nbiFolderRoot, self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/bin/chmod 644 %@/i386/x86_64/kernelcache", self.nbiFolderRoot]];
     [Shell execute:[NSString stringWithFormat:@"/usr/sbin/chown root:wheel %@/i386/x86_64/kernelcache", self.nbiFolderRoot]];
     
@@ -191,6 +197,7 @@
     // Create the NBImageInfo Plist
     [self updateProgressText:@"Creating NBImageInfo.plist..."];
     NSString *NBImageInfoPath = [self.nbiFolderRoot stringByAppendingString:@"/NBImageInfo"];
+   // [Shell execute:[NSString stringWithFormat:@"/bin/chmod 755 %@", self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/bin/defaults write %@ Architectures -array i386", NBImageInfoPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/bin/defaults write %@ BackwardCompatible -bool NO", NBImageInfoPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/bin/defaults write %@ BootFile -string booter", NBImageInfoPath]];
@@ -221,7 +228,7 @@
     if (options.compressImage) {
         [self updateProgressBarText:@"Compressing image..."];
         [controller prepareProgressBar];
-        [Shell execute:[NSString stringWithFormat:@"/usr/bin/hdiutil compact %@/Install.dmg.sparseimage -puppetstrings", self.nbiFolderRoot]];
+        [Shell execute:[NSString stringWithFormat:@"/usr/bin/hdiutil compact %@/Install.dmg.sparseimage -puppetstrings -batteryallowed", self.nbiFolderRoot]];
         [controller prepareProgressIndicator];
     }
 
@@ -232,9 +239,14 @@
 
 // identify and declare the OS Implementation
 -(void)createOS:(NSString*)osVersion andOptions:(CasperNetinstallOptions *)options {
+    if([osVersion isEqualToString:@"10.10"]){
+        self.os = [[YosemiteOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
+    }
+    else {
         self.os = [[OS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
-}
+    }
 
+}
 -(void)updateProgressText:(NSString *)progress{
     AppDelegate *controller = (AppDelegate *)[[NSApplication sharedApplication] delegate];
     [controller updateProgressText:progress];

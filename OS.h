@@ -13,6 +13,7 @@
 
 @property NSString *osIdentifier; // a string which holds a unique identifier for the OS folder
 @property NSString *mountPath;
+@property NSString *kernelPath;
 @property CasperNetinstallOptions *options;
 
 

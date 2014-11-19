@@ -14,6 +14,7 @@
 AppDelegate *delegate;
 @synthesize osIdentifier;
 @synthesize mountPath;
+@synthesize kernelPath;
 @synthesize options;
 
 -(id)initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion{
@@ -21,6 +22,7 @@ AppDelegate *delegate;
     delegate = (AppDelegate *)[[NSApplication sharedApplication] delegate];
     self.osIdentifier = osVersion;
     self.options = options;
+    self.kernelPath = @"/mach_kernel";
     self.mountPath = options.mountPath;
     return [super init];
 }

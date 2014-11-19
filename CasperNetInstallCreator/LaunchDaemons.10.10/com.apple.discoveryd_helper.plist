@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.discoveryd_helper</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/discoveryd_helper</string>
+		<string>--loglevel</string>
+		<string>Detailed</string>
+		<string>--logclass</string>
+		<string>Everything</string>
+		<string>--logto</string>
+		<string>asl</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.discoveryd_helper</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

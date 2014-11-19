@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.networking.discoveryd</string>
+	<key>UserName</key>
+	<string>_mdnsresponder</string>
+	<key>GroupName</key>
+	<string>_mdnsresponder</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/discoveryd</string>
+		<string>--udsocket</string>
+		<string>standard</string>
+		<string>--loglevel</string>
+		<string>Basic</string>
+		<string>--logclass</string>
+		<string>Everything</string>
+		<string>--logto</string>
+		<string>asl</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>InitGroups</key>
+	<false/>
+	<key>WaitForDebugger</key>
+	<false/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.discoveryd.dnsproxy</key>
+		<true/>
+		<key>com.apple.discoveryd</key>
+		<true/>
+		<key>com.apple.d2d.ipc</key>
+		<true/>
+	</dict>
+	<key>Sockets</key>
+	<dict>
+		<key>ServiceDiscovery</key>
+		<dict>
+			<key>SockFamily</key>
+			<string>Unix</string>
+			<key>SockPathName</key>
+			<string>/var/run/mDNSResponder</string>
+			<key>SockPathMode</key>
+			<integer>438</integer>
+		</dict>
+	</dict>
+	<key>BeginTransactionAtShutdown</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+        <key>USE_DEFAULT_COMPUTERNAME_WITHOUT_MODEL</key>
+        <string>1</string>
+		<!--Uncomment these keys to enable malloc debugging-->
+		<!--<key>MallocGuardEdges</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocStackLogging</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocScribble</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocCheckHeapStart</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocCheckHeapEach</key>-->
+		<!--<string>500</string>-->
+		<!--<key>MallocCheckHeapAbort</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocErrorAbort</key>-->
+		<!--<string>1</string>-->
+	</dict>
+</dict>
+</plist>
