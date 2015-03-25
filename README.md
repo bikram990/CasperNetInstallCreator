@@ -26,7 +26,7 @@ Casper NetInstall Image Creator modifies an existing OS packages built with Comp
 This name will be listed under the NetBoot Service pane in Server Admin.
 
  3. Enter an image index. If you are not planning to host the image on multiple servers for load
-balancing, select an index between 1-4001. If you are going host the image on multiple servers, select an index between 4002-9999.
+balancing, select an index between 1-4095. If you are going host the image on multiple servers, select an index between 4096–65535.
 
  4. Select the Enabled checkbox to enable the NetInstall image immediately after it is created.
 
