@@ -40,26 +40,30 @@
 
 
 - (IBAction)advancedOptionsAction:(id)sender {
-
+    
+    
     [NSApp beginSheet:advancedPanel modalForWindow:[NSApp mainWindow] modalDelegate:nil didEndSelector:nil contextInfo:nil];
     [NSApp runModalForWindow:advancedPanel];
     [NSApp endSheet:advancedPanel];
     [advancedPanel orderOut:self];
 }
 - (IBAction)chooseImageFile:(id)sender {
-    imageSourcePath.stringValue = [self retrieveFilePath];
-    [self fieldChanged:sender];
+        imageSourcePath.stringValue = [self retrieveFilePath];
+        [self fieldChanged:sender];
+    
 }
 - (IBAction)chooseCasperFile:(id)sender {
-    casperSourcePath.stringValue = [self retrieveFilePath];
-    [self fieldChanged:sender];
+        casperSourcePath.stringValue = [self retrieveFilePath];
+        [self fieldChanged:sender];
+    
 }
 - (IBAction)casperPreferenceChanged:(id)sender {
-    if(casperPreferenceFile.state == NSOnState){
-        [jssAddress setEnabled:YES];
-    } else {
-        [jssAddress setEnabled:NO];
-    }
+        if(casperPreferenceFile.state == NSOnState){
+            [jssAddress setEnabled:YES];
+        } else {
+            [jssAddress setEnabled:NO];
+        }
+    
 }
 
 - (NSString *)retrieveFilePath {
@@ -103,8 +107,12 @@
 }
 
 - (IBAction)fieldChanged:(id)sender {
+    
     [self updateOptions];
-    [createButton setEnabled:[options readyToCreate]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [createButton setEnabled:[options readyToCreate]];
+    });
+   
 }
 
 - (IBAction)create:(id)sender {
@@ -126,8 +134,13 @@
         // connect to the model and begin the process
         // Use a thread to ensure that the GUI is reachable
         // and renderable
-        Creator *creator = [[Creator alloc] init];
-        [NSThread detachNewThreadSelector:@selector(modifyImageWithOptions:) toTarget:creator withObject:options];
+        
+        //[NSThread detachNewThreadSelector:@selector(modifyImageWithOptions:) toTarget:creator withObject:options];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            Creator *creator = [[Creator alloc] init];
+            [creator modifyImageWithOptions:options];
+        });
     
         // Disable all the fields and boxes
         [self toggleFieldEnabledState:NO];
@@ -136,40 +149,48 @@
 }
 
 -(void)updateOptions{
-    options.imagePath = [imageSourcePath.stringValue stringByReplacingOccurrencesOfString:@" " withString:@"\\ "];
-    options.imageName = imageName.stringValue;
-    options.index = imageIndex.stringValue;
-    options.enableImage = imageEnabled.state == NSOnState;
-    options.defaultImage = defaultImage.state == NSOnState;
-    options.compressImage = compressImage.state == NSOnState;
-    options.casperImagingPath = casperSourcePath.stringValue;
-    options.jssAddress = jssAddress.stringValue;
-    options.createPreferenceFile = casperPreferenceFile.state == NSOnState;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        options.imagePath = [imageSourcePath.stringValue stringByReplacingOccurrencesOfString:@" " withString:@"\\ "];
+        options.imageName = imageName.stringValue;
+        options.index = imageIndex.stringValue;
+        options.enableImage = imageEnabled.state == NSOnState;
+        options.defaultImage = defaultImage.state == NSOnState;
+        options.compressImage = compressImage.state == NSOnState;
+        options.casperImagingPath = casperSourcePath.stringValue;
+        options.jssAddress = jssAddress.stringValue;
+        options.createPreferenceFile = casperPreferenceFile.state == NSOnState;
+    });
+
+   
 }
 
 -(void) toggleFieldEnabledState:(BOOL)state{
-    [imageSourcePath setEnabled:state];
-    [casperImagingApp setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
-    [casperSourcePath setEnabled:state];
-    [casperPreferenceFile setEnabled:state];
-    [openFileItem setEnabled:state];
-    [saveFileItem setEnabled:state];
-    [imageName setEnabled:state];
-    [imageIndex setEnabled:state];
-    [imageEnabled setEnabled:state];
-    [defaultImage setEnabled:state];
-    [compressImage setEnabled:state];
-    [jssAddress setEnabled:casperPreferenceFile.state == NSOnState ? state: NO];
-    [imageChooseButton setEnabled:state];
-    [casperChooseButton setEnabled:state];
-    [pathToImageSource setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
-    [imageNameTextBox setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
-    [imageIndexTextBox setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
-    [createButton setEnabled:state == YES ? [options readyToCreate] : state];
-    for (NSToolbarItem *item in [toolbar items]){
-        [item setEnabled:state];
-    }
-    [ipNameofJSS setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [imageSourcePath setEnabled:state];
+        [casperImagingApp setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
+        [casperSourcePath setEnabled:state];
+        [casperPreferenceFile setEnabled:state];
+        [openFileItem setEnabled:state];
+        [saveFileItem setEnabled:state];
+        [imageName setEnabled:state];
+        [imageIndex setEnabled:state];
+        [imageEnabled setEnabled:state];
+        [defaultImage setEnabled:state];
+        [compressImage setEnabled:state];
+        [jssAddress setEnabled:casperPreferenceFile.state == NSOnState ? state: NO];
+        [imageChooseButton setEnabled:state];
+        [casperChooseButton setEnabled:state];
+        [pathToImageSource setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
+        [imageNameTextBox setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
+        [imageIndexTextBox setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
+        [createButton setEnabled:state == YES ? [options readyToCreate] : state];
+        for (NSToolbarItem *item in [toolbar items]){
+            [item setEnabled:state];
+        }
+        [ipNameofJSS setTextColor:state == YES ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
+    });
+    
     
 }
 
@@ -185,75 +206,108 @@
 }
 
 -(void)prepareProgressBar{
-    [progressIndicator stopAnimation:self];
-    [[progressIndicator animator] setHidden:YES];
-    [progressIndicator setHidden:YES];
-    [[progressText animator] setHidden:YES];
-    [progressText setHidden:YES];
-    [[progressBarText animator] setHidden:NO];
-    [progressBar setHidden:NO];
-    [progressBarText setHidden:NO];
-    [progressBar setUsesThreadedAnimation:YES];
+    NSLog(@"About to prepare");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [progressIndicator stopAnimation:self];
+        [[progressIndicator animator] setHidden:YES];
+        [progressIndicator setHidden:YES];
+        [[progressText animator] setHidden:YES];
+        [progressText setHidden:YES];
+        [[progressBarText animator] setHidden:NO];
+        [progressBar setDoubleValue:0.0];
+        [progressBar setHidden:NO];
+        [progressBarText setHidden:NO];
+        [progressBar setUsesThreadedAnimation:YES];
+        [progressBar setIndeterminate:NO];
+    });
+   
 }
 
 -(void) updateProgressPercent:(double)progress{
-    progressBar.doubleValue = progress;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(progress > 0.0  && progress <= 100.0){
+            progressBar.doubleValue = progress;
+        }
+        [progressBar displayIfNeeded];
+        
+    });
+    
 }
 
 -(void) prepareProgressIndicator{
-    [[progressBar animator] setHidden:YES];
-    [progressBar setHidden:YES];
-    [[progressIndicator animator] setHidden:NO];
-    [progressIndicator setHidden:NO];
-    [[progressBarText animator] setHidden:YES];
-    [progressBarText setHidden:YES];
-    [[progressText animator] setHidden:NO];
-    [progressText setHidden:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[progressBar animator] setHidden:YES];
+        [progressBar setHidden:YES];
+        [[progressIndicator animator] setHidden:NO];
+        [progressIndicator setHidden:NO];
+        [[progressBarText animator] setHidden:YES];
+        [progressBarText setHidden:YES];
+        [[progressText animator] setHidden:NO];
+        [progressText setHidden:NO];
+    });
+    
 }
 
 -(void) updateProgressText:(NSString *)progress {
-    [progressText setTextColor:[NSColor blackColor]];
-    [[progressIndicator animator] setHidden:NO];
-    [progressIndicator setHidden:NO];
-    [progressIndicator startAnimation:self];
-    [[progressText animator] setHidden:NO];
-    [progressText setHidden:NO];
-    progressText.stringValue = progress;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [progressText setTextColor:[NSColor blackColor]];
+        [[progressIndicator animator] setHidden:NO];
+        [progressIndicator setHidden:NO];
+        [progressIndicator startAnimation:self];
+        [[progressText animator] setHidden:NO];
+        [progressText setHidden:NO];
+        progressText.stringValue = progress;
+    });
+    
+    
 }
 
 -(void) updateProgressBarText:(NSString *)progress {
-    [progressBarText setTextColor:[NSColor blackColor]];
-    [progressBarText setHidden:NO];
-    progressBarText.stringValue = progress;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [progressBarText setTextColor:[NSColor blackColor]];
+        [progressBarText setHidden:NO];
+        progressBarText.stringValue = progress;
+    });
+
 }
 
 -(void) displayCommandError{
-    [progressIndicator stopAnimation:self];
-    [[progressIndicator animator] setHidden:YES];
-    [progressIndicator setHidden:YES];
-    [[progressBarText animator] setHidden:YES];
-    [progressBarText setHidden:YES];
-    [[progressBar animator] setHidden:YES];
-    [progressBar setHidden:YES];
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [progressIndicator stopAnimation:self];
+        [[progressIndicator animator] setHidden:YES];
+        [progressIndicator setHidden:YES];
+        [[progressBarText animator] setHidden:YES];
+        [progressBarText setHidden:YES];
+        [[progressBar animator] setHidden:YES];
+        [progressBar setHidden:YES];
+        
+        
+        [progressText setTextColor:[NSColor redColor]];
+        [[progressText animator] setHidden:NO];
+        [progressText setHidden:NO];
+        NSString *step = progressText.stringValue;
+        step = [step stringByReplacingOccurrencesOfString:@"..." withString:@""];
+        progressText.stringValue = [@"An error occurred while " stringByAppendingString:[step lowercaseString]];
+        
+        [self toggleFieldEnabledState:YES];
+    });
     
-    [progressText setTextColor:[NSColor redColor]];
-    [[progressText animator] setHidden:NO];
-    [progressText setHidden:NO];
-    NSString *step = progressText.stringValue;
-    step = [step stringByReplacingOccurrencesOfString:@"..." withString:@""];
-    progressText.stringValue = [@"An error occurred while " stringByAppendingString:[step lowercaseString]];
-    
-    [self toggleFieldEnabledState:YES];
     
 }
 
 
 -(void)creationComplete{
     
-    progressText.stringValue = @"The image was successfully created.";
-    [progressIndicator setHidden:YES];
-    [self toggleFieldEnabledState:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        progressText.stringValue = @"The image was successfully created.";
+        [progressIndicator setHidden:YES];
+        [self toggleFieldEnabledState:YES];
+    });
+    
+    
     
 }
 

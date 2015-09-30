@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9046" systemVersion="15A282b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <development version="6300" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9046"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -38,9 +39,9 @@
                 <outlet property="onOpen" destination="IAo-SY-fd9" id="wZk-il-h7l"/>
                 <outlet property="openFileItem" destination="IAo-SY-fd9" id="la2-xY-Nca"/>
                 <outlet property="pathToImageSource" destination="LZp-ZP-cvd" id="7Zr-Qp-Wht"/>
-                <outlet property="progressBar" destination="jyt-Xt-mn4" id="r1W-Gw-F92"/>
+                <outlet property="progressBar" destination="839-qi-hXl" id="iIa-Y6-LM3"/>
                 <outlet property="progressBarText" destination="arb-FY-Aig" id="CDh-r9-hlm"/>
-                <outlet property="progressIndicator" destination="obM-Vb-bNN" id="rSs-YP-mbc"/>
+                <outlet property="progressIndicator" destination="dRP-Zl-okK" id="Rln-ki-1FL"/>
                 <outlet property="progressText" destination="WVN-pe-zYQ" id="wKV-Y1-Aak"/>
                 <outlet property="saveFileItem" destination="pxx-59-PXV" id="2Yf-Ps-gW7"/>
                 <outlet property="toolbar" destination="hP9-ji-2xf" id="i2d-TA-Uun"/>
@@ -130,11 +131,11 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Casper NetInstall Image Creator 5.0" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="Casper NetInstall Image Creator 6.0" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES"/>
             <rect key="contentRect" x="547" y="429" width="640" height="397"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="640" height="397"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -150,6 +151,7 @@
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0b5-83-Faw">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -162,6 +164,7 @@
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yd-VO-V0w">
                                     <rect key="frame" x="76" y="17" width="132" height="17"/>
                                     <string key="toolTip">The IP/DNS address of the JSS to which you would like the Casper Imaging application to be pointed to by default when the image boots up.</string>
+                                    <animations/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="JSS URL:" id="CQe-tt-vaH">
                                         <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -170,6 +173,7 @@
                                 </textField>
                                 <button toolTip="Set the URL of the JSS for automated imaging.  This URL is also used for establishing trust for a JDS. " fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJc-Hg-gPp">
                                     <rect key="frame" x="159" y="45" width="221" height="18"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="check" title="Create Casper Preference File" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="caM-so-Ndh">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -181,6 +185,7 @@
                                 </button>
                                 <textField toolTip="The path to a copy of the Casper Imaging application to be included inside the NetInstall image bundle." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-OS-ofq">
                                     <rect key="frame" x="22" y="72" width="156" height="17"/>
+                                    <animations/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Casper Imaging App:" id="8c5-vD-zvD">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -189,6 +194,7 @@
                                 </textField>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lEG-w2-JSR">
                                     <rect key="frame" x="161" y="69" width="328" height="22"/>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="IjT-dD-zCi">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -201,6 +207,7 @@
                                 </textField>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVg-U3-2vk">
                                     <rect key="frame" x="495" y="67" width="100" height="25"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="roundTextured" title="Choose..." bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DY2-HX-9hF">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -211,7 +218,9 @@
                                     </connections>
                                 </button>
                             </subviews>
+                            <animations/>
                         </view>
+                        <animations/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
@@ -223,6 +232,7 @@
                             <subviews>
                                 <textField toolTip="The path to a disk image that contains the OS you would like to use as a source for the NetInstall image." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOS-KB-0rX">
                                     <rect key="frame" x="15" y="139" width="149" height="17"/>
+                                    <animations/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Path to Image Source:" id="LZp-ZP-cvd">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -231,6 +241,7 @@
                                 </textField>
                                 <textField toolTip="Specifies that the NetInstall  image should appear as &quot;Enabled&quot; within the NetBoot service pane of Server." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvb-9i-ZRK">
                                     <rect key="frame" x="160" y="137" width="330" height="22"/>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="AJe-4p-BgO">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -246,6 +257,7 @@
                                 </textField>
                                 <button canDrawConcurrently="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUj-VN-KgH">
                                     <rect key="frame" x="495" y="135" width="100" height="25"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="roundTextured" title="Choose..." bezelStyle="texturedRounded" alignment="center" borderStyle="border" inset="2" id="r5w-yP-g7u">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -260,6 +272,7 @@
                                 </button>
                                 <textField toolTip="Name of the image as you would like it to appear in the NetBoot service within Server Admin." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hc-KZ-XFQ">
                                     <rect key="frame" x="68" y="107" width="114" height="17"/>
+                                    <animations/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Image Name:" id="QEe-js-tAJ">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -268,6 +281,7 @@
                                 </textField>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eH6-eK-L4v">
                                     <rect key="frame" x="161" y="105" width="330" height="22"/>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jug-Yv-ynq">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -281,6 +295,7 @@
                                     <rect key="frame" x="68" y="77" width="89" height="17"/>
                                     <string key="toolTip">Index 1–4095 indicates a local image unique to the server. 
 Index 4095-65535 should be used if the image is to be stored on multiple servers for NetBoot load balancing.</string>
+                                    <animations/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Image Index:" id="2ER-F4-L6S">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -289,6 +304,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                 </textField>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wb-27-qyL">
                                     <rect key="frame" x="160" y="75" width="57" height="22"/>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="1" placeholderString="1" drawsBackground="YES" id="JDR-nK-Kjr">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -300,6 +316,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                 </textField>
                                 <button toolTip="Specifies that the NetInstall image should appear as &quot;Enabled&quot; within the NetBoot service of Server." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="829-6z-pnv">
                                     <rect key="frame" x="158" y="51" width="198" height="18"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="check" title="Enable this NetInstall Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="lF2-nG-VhX">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -310,6 +327,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                 </button>
                                 <button toolTip="Specifies that the NetInstall image will be set as the default image within the NetBoot service in Server." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGp-rO-ryy">
                                     <rect key="frame" x="158" y="31" width="310" height="18"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="check" title="Set this NetInstall Image as the Default Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="hOz-AA-YSD">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -320,6 +338,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                 </button>
                                 <button toolTip="Compress the image after creation.  Compressing an image adds significant time to the image creation process." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KK8-z5-684">
                                     <rect key="frame" x="158" y="11" width="127" height="18"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="check" title="Compress Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6V1-xq-XB3">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -329,23 +348,24 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                     </connections>
                                 </button>
                             </subviews>
+                            <animations/>
                         </view>
+                        <animations/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <textField hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arb-FY-Aig">
                         <rect key="frame" x="18" y="45" width="183" height="14"/>
+                        <animations/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Converting image to read/write..." id="3Ug-Cu-Nlb">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="jyt-Xt-mn4">
-                        <rect key="frame" x="20" y="18" width="483" height="20"/>
-                    </progressIndicator>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cO-ib-saY">
                         <rect key="frame" x="518" y="17" width="102" height="25"/>
+                        <animations/>
                         <buttonCell key="cell" type="roundTextured" title="Create" bezelStyle="texturedRounded" alignment="center" borderStyle="border" inset="2" id="2dG-WF-TDT">
                             <behavior key="behavior" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -354,18 +374,25 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                             <action selector="create:" target="Voe-Tx-rLC" id="KCy-Bw-IQc"/>
                         </connections>
                     </button>
-                    <progressIndicator canDrawConcurrently="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="obM-Vb-bNN">
-                        <rect key="frame" x="20" y="20" width="16" height="16"/>
-                    </progressIndicator>
                     <textField hidden="YES" canDrawConcurrently="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVN-pe-zYQ">
                         <rect key="frame" x="42" y="20" width="454" height="17"/>
+                        <animations/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Current Event" id="IEa-aV-kbG">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-Zl-okK">
+                        <rect key="frame" x="20" y="20" width="16" height="16"/>
+                        <animations/>
+                    </progressIndicator>
+                    <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="839-qi-hXl">
+                        <rect key="frame" x="20" y="18" width="474" height="20"/>
+                        <animations/>
+                    </progressIndicator>
                 </subviews>
+                <animations/>
             </view>
             <toolbar key="toolbar" implicitIdentifier="034766D8-3292-4F6C-B8D2-C0F17586AA7F" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="hP9-ji-2xf">
                 <allowedToolbarItems>
@@ -394,7 +421,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="-1724" y="-168" width="462" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="inC-ro-NbB">
                 <rect key="frame" x="0.0" y="0.0" width="462" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,6 +434,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                             <subviews>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NbY-mE-mRv">
                                     <rect key="frame" x="15" y="240" width="140" height="17"/>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Desktop Background:" id="xQS-5w-6Lj">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -415,6 +443,7 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                 </textField>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDF-uK-dv5">
                                     <rect key="frame" x="268" y="21" width="91" height="23"/>
+                                    <animations/>
                                     <buttonCell key="cell" type="squareTextured" title="Choose..." bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Io1-s2-C8H">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -425,10 +454,12 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                 </button>
                                 <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTS-hG-6Lh">
                                     <rect key="frame" x="68" y="51" width="290" height="181"/>
+                                    <animations/>
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="groove" image="CasperSuiteDesktop" id="uK8-P7-hhU"/>
                                 </imageView>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BHC-ka-BpN">
                                     <rect key="frame" x="63" y="23" width="198" height="22"/>
+                                    <animations/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="vyE-ym-K8A">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -436,12 +467,15 @@ Index 4095-65535 should be used if the image is to be stored on multiple servers
                                     </textFieldCell>
                                 </textField>
                             </subviews>
+                            <animations/>
                         </view>
+                        <animations/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8X7-Ii-epw">
                         <rect key="frame" x="256" y="14" width="96" height="32"/>
+                        <animations/>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PLa-di-i7X">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -455,6 +489,7 @@ Gw
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-Lj-IhX">
                         <rect key="frame" x="352" y="14" width="96" height="32"/>
+                        <animations/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jvx-5P-Ba8">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -467,6 +502,7 @@ DQ
                         </connections>
                     </button>
                 </subviews>
+                <animations/>
             </view>
             <connections>
                 <outlet property="backgroundImage" destination="BHC-ka-BpN" id="sqZ-OK-8V5"/>

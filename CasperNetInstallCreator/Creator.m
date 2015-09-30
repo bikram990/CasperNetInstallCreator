@@ -9,6 +9,8 @@
 #import "../Shell.h"
 #import "../OS.h"
 #import "../YosemiteOS.h"
+#import "CapitanOS.h"
+#import "MavericksOS.h"
 
 @implementation Creator
 
@@ -180,8 +182,9 @@
     // Create the booter and kernel files
     [self updateProgressText:@"Creating Booter and Kernel Files..."];
     //Booter
-    [Shell execute:[NSString stringWithFormat:@"/usr/bin/ditto -rsrc '%@/usr/standalone/i386/boot.efi' %@/i386/booter", self.mountPath, self.nbiFolderRoot]];
-    [Shell execute:[NSString stringWithFormat:@"/bin/chmod 644 '%@/i386/booter'", self.nbiFolderRoot]];
+    [Shell execute:[NSString stringWithFormat:@"/bin/mkdir -p %@/i386", self.nbiFolderRoot]];
+    [Shell execute:[NSString stringWithFormat:@"/bin/cp '%@/usr/standalone/i386/boot.efi' %@/i386/booter", self.mountPath, self.nbiFolderRoot]];
+    [Shell execute:[NSString stringWithFormat:@"/bin/chmod 644 %@/i386/booter", self.nbiFolderRoot]];
     [Shell execute:[NSString stringWithFormat:@"/usr/sbin/chown root:admin %@/i386/booter", self.nbiFolderRoot]];
     
     //Kernel Cache
@@ -241,9 +244,10 @@
 -(void)createOS:(NSString*)osVersion andOptions:(CasperNetinstallOptions *)options {
     if([osVersion isEqualToString:@"10.10"]){
         self.os = [[YosemiteOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
-    }
-    else {
-        self.os = [[OS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
+    } else if ([osVersion isEqualToString:@"10.11"]) {
+        self.os = [[CapitanOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
+    } else {
+        self.os = [[MavericksOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
     }
 
 }

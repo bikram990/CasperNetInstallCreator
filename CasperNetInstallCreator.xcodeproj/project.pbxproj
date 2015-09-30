@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		012151F1194FE3E3008564F4 /* Wallpaper.app in Resources */ = {isa = PBXBuildFile; fileRef = 012151F0194FE3E3008564F4 /* Wallpaper.app */; };
+		01AE54EE1BACAFF0000F4462 /* rc.install.10.10 in Resources */ = {isa = PBXBuildFile; fileRef = 01AE54ED1BACAFF0000F4462 /* rc.install.10.10 */; };
+		01AE54F41BACB051000F4462 /* rc.install.10.11 in Resources */ = {isa = PBXBuildFile; fileRef = 01AE54F31BACB051000F4462 /* rc.install.10.11 */; };
 		01B6A2DD19477F770016CCBD /* LaunchAgents.10.9 in Resources */ = {isa = PBXBuildFile; fileRef = 01B6A2DB19477F770016CCBD /* LaunchAgents.10.9 */; };
 		01B6A2DE19477F770016CCBD /* LaunchDaemons.10.9 in Resources */ = {isa = PBXBuildFile; fileRef = 01B6A2DC19477F770016CCBD /* LaunchDaemons.10.9 */; };
 		01B6A2DF19477F920016CCBD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75CC2DBA18DB3E9B00FDF8B8 /* MainMenu.xib */; };
@@ -16,11 +18,15 @@
 		01DBD2BC18F358D9004F43AF /* rc.cdrom.postWS.Terminal in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */; };
 		01DBD2BD18F358D9004F43AF /* rc.cdrom in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2A818F34C3F004F43AF /* rc.cdrom */; };
 		01DBD2BE18F358D9004F43AF /* rc.cdrom.preWS in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */; };
-		01DBD2BF18F358D9004F43AF /* rc.install in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2AA18F34C3F004F43AF /* rc.install */; };
+		01DBD2BF18F358D9004F43AF /* rc.install.10.9 in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2AA18F34C3F004F43AF /* rc.install.10.9 */; };
 		01DBD2C118F35DE2004F43AF /* NetInstall LaunchPad.app in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */; };
+		750F5C361BA8B04900C2491B /* LaunchDaemons.10.11 in Resources */ = {isa = PBXBuildFile; fileRef = 750F5C351BA8B04900C2491B /* LaunchDaemons.10.11 */; };
+		750F5C381BA8B06500C2491B /* LaunchAgents.10.11 in Resources */ = {isa = PBXBuildFile; fileRef = 750F5C371BA8B06500C2491B /* LaunchAgents.10.11 */; };
 		7511887919DB3F5000932564 /* LaunchAgents.10.10 in Resources */ = {isa = PBXBuildFile; fileRef = 7511887719DB3F5000932564 /* LaunchAgents.10.10 */; };
 		7511887A19DB3F5000932564 /* LaunchDaemons.10.10 in Resources */ = {isa = PBXBuildFile; fileRef = 7511887819DB3F5000932564 /* LaunchDaemons.10.10 */; };
 		7511887F19DC9A2C00932564 /* YosemiteOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511887E19DC9A2C00932564 /* YosemiteOS.m */; };
+		756F70871BB1A56C004366C6 /* CapitanOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F70861BB1A56C004366C6 /* CapitanOS.m */; settings = {ASSET_TAGS = (); }; };
+		756F708A1BB1DBAD004366C6 /* MavericksOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F70891BB1DBAD004366C6 /* MavericksOS.m */; settings = {ASSET_TAGS = (); }; };
 		75BD7A4018EAFF5200F93BE1 /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BD7A3F18EAFF5200F93BE1 /* OS.m */; };
 		75BD7A4318EB00A200F93BE1 /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BD7A4218EB00A200F93BE1 /* Shell.m */; };
 		75CC2DA618DB3E9B00FDF8B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC2DA518DB3E9B00FDF8B8 /* Cocoa.framework */; };
@@ -52,19 +58,27 @@
 
 /* Begin PBXFileReference section */
 		012151F0194FE3E3008564F4 /* Wallpaper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Wallpaper.app; sourceTree = "<group>"; };
+		01AE54ED1BACAFF0000F4462 /* rc.install.10.10 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.install.10.10; sourceTree = "<group>"; };
+		01AE54F31BACB051000F4462 /* rc.install.10.11 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.install.10.11; sourceTree = "<group>"; };
 		01B6A2DB19477F770016CCBD /* LaunchAgents.10.9 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchAgents.10.9; sourceTree = "<group>"; };
 		01B6A2DC19477F770016CCBD /* LaunchDaemons.10.9 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchDaemons.10.9; sourceTree = "<group>"; };
 		01DBD2A818F34C3F004F43AF /* rc.cdrom */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.cdrom; path = CasperNetInstallCreator/rc.cdrom; sourceTree = SOURCE_ROOT; };
 		01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.cdrom.preWS; path = CasperNetInstallCreator/rc.cdrom.preWS; sourceTree = SOURCE_ROOT; };
-		01DBD2AA18F34C3F004F43AF /* rc.install */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.install; path = CasperNetInstallCreator/rc.install; sourceTree = SOURCE_ROOT; };
+		01DBD2AA18F34C3F004F43AF /* rc.install.10.9 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = rc.install.10.9; path = CasperNetInstallCreator/rc.install.10.9; sourceTree = SOURCE_ROOT; };
 		01DBD2AE18F34CFC004F43AF /* rc.cdrom.postWS.LaunchPad */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.LaunchPad; sourceTree = "<group>"; };
 		01DBD2AF18F34CFC004F43AF /* rc.cdrom.postWS.ShutDown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.ShutDown; sourceTree = "<group>"; };
 		01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = rc.cdrom.postWS.Terminal; sourceTree = "<group>"; };
 		01DBD2C018F35DE2004F43AF /* NetInstall LaunchPad.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "NetInstall LaunchPad.app"; sourceTree = "<group>"; };
+		750F5C351BA8B04900C2491B /* LaunchDaemons.10.11 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchDaemons.10.11; sourceTree = "<group>"; };
+		750F5C371BA8B06500C2491B /* LaunchAgents.10.11 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchAgents.10.11; sourceTree = "<group>"; };
 		7511887719DB3F5000932564 /* LaunchAgents.10.10 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchAgents.10.10; sourceTree = "<group>"; };
 		7511887819DB3F5000932564 /* LaunchDaemons.10.10 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchDaemons.10.10; sourceTree = "<group>"; };
 		7511887D19DC9A2C00932564 /* YosemiteOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YosemiteOS.h; path = ../YosemiteOS.h; sourceTree = "<group>"; };
 		7511887E19DC9A2C00932564 /* YosemiteOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YosemiteOS.m; path = ../YosemiteOS.m; sourceTree = "<group>"; };
+		756F70851BB1A56C004366C6 /* CapitanOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapitanOS.h; sourceTree = "<group>"; };
+		756F70861BB1A56C004366C6 /* CapitanOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapitanOS.m; sourceTree = "<group>"; };
+		756F70881BB1DBAD004366C6 /* MavericksOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MavericksOS.h; sourceTree = "<group>"; };
+		756F70891BB1DBAD004366C6 /* MavericksOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MavericksOS.m; sourceTree = "<group>"; };
 		75BD7A3E18EAFF5200F93BE1 /* OS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OS.h; path = ../OS.h; sourceTree = "<group>"; };
 		75BD7A3F18EAFF5200F93BE1 /* OS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OS.m; path = ../OS.m; sourceTree = "<group>"; };
 		75BD7A4118EB00A200F93BE1 /* Shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shell.h; path = ../Shell.h; sourceTree = "<group>"; };
@@ -163,6 +177,10 @@
 		75CC2DAB18DB3E9B00FDF8B8 /* CasperNetInstallCreator */ = {
 			isa = PBXGroup;
 			children = (
+				756F70881BB1DBAD004366C6 /* MavericksOS.h */,
+				756F70891BB1DBAD004366C6 /* MavericksOS.m */,
+				756F70851BB1A56C004366C6 /* CapitanOS.h */,
+				756F70861BB1A56C004366C6 /* CapitanOS.m */,
 				7511887D19DC9A2C00932564 /* YosemiteOS.h */,
 				7511887E19DC9A2C00932564 /* YosemiteOS.m */,
 				75CC2DE018DB95C200FDF8B8 /* AdvancedPanel.h */,
@@ -187,6 +205,8 @@
 		75CC2DAC18DB3E9B00FDF8B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				750F5C371BA8B06500C2491B /* LaunchAgents.10.11 */,
+				750F5C351BA8B04900C2491B /* LaunchDaemons.10.11 */,
 				7511887719DB3F5000932564 /* LaunchAgents.10.10 */,
 				7511887819DB3F5000932564 /* LaunchDaemons.10.10 */,
 				012151F0194FE3E3008564F4 /* Wallpaper.app */,
@@ -198,7 +218,9 @@
 				01DBD2B018F34CFC004F43AF /* rc.cdrom.postWS.Terminal */,
 				01DBD2A818F34C3F004F43AF /* rc.cdrom */,
 				01DBD2A918F34C3F004F43AF /* rc.cdrom.preWS */,
-				01DBD2AA18F34C3F004F43AF /* rc.install */,
+				01DBD2AA18F34C3F004F43AF /* rc.install.10.9 */,
+				01AE54ED1BACAFF0000F4462 /* rc.install.10.10 */,
+				01AE54F31BACB051000F4462 /* rc.install.10.11 */,
 				75CC2DE518DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns */,
 				75CC2DE318DC781C00FDF8B8 /* CasperSuiteDesktop.jpg */,
 				75CC2DAD18DB3E9B00FDF8B8 /* CasperNetInstallCreator-Info.plist */,
@@ -305,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B6A2DF19477F920016CCBD /* MainMenu.xib in Resources */,
+				01AE54F41BACB051000F4462 /* rc.install.10.11 in Resources */,
 				012151F1194FE3E3008564F4 /* Wallpaper.app in Resources */,
 				01DBD2BA18F358D9004F43AF /* rc.cdrom.postWS.LaunchPad in Resources */,
 				01DBD2BB18F358D9004F43AF /* rc.cdrom.postWS.ShutDown in Resources */,
@@ -314,11 +337,14 @@
 				01DBD2BE18F358D9004F43AF /* rc.cdrom.preWS in Resources */,
 				01B6A2DD19477F770016CCBD /* LaunchAgents.10.9 in Resources */,
 				01DBD2C118F35DE2004F43AF /* NetInstall LaunchPad.app in Resources */,
-				01DBD2BF18F358D9004F43AF /* rc.install in Resources */,
+				01DBD2BF18F358D9004F43AF /* rc.install.10.9 in Resources */,
 				7511887A19DB3F5000932564 /* LaunchDaemons.10.10 in Resources */,
 				75CC2DB018DB3E9B00FDF8B8 /* InfoPlist.strings in Resources */,
 				75CC2DE618DC79FE00FDF8B8 /* CasperNetInstallImageCreator.icns in Resources */,
+				750F5C381BA8B06500C2491B /* LaunchAgents.10.11 in Resources */,
 				7511887919DB3F5000932564 /* LaunchAgents.10.10 in Resources */,
+				01AE54EE1BACAFF0000F4462 /* rc.install.10.10 in Resources */,
+				750F5C361BA8B04900C2491B /* LaunchDaemons.10.11 in Resources */,
 				75CC2DE418DC781C00FDF8B8 /* CasperSuiteDesktop.jpg in Resources */,
 				75CC2DBE18DB3E9B00FDF8B8 /* Images.xcassets in Resources */,
 			);
@@ -340,9 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7511887F19DC9A2C00932564 /* YosemiteOS.m in Sources */,
+				756F70871BB1A56C004366C6 /* CapitanOS.m in Sources */,
 				75CC2DEE18DCBF0100FDF8B8 /* Creator.m in Sources */,
 				75CC2DE918DC81DC00FDF8B8 /* CasperNetinstallOptions.m in Sources */,
 				75BD7A4318EB00A200F93BE1 /* Shell.m in Sources */,
+				756F708A1BB1DBAD004366C6 /* MavericksOS.m in Sources */,
 				75CC2DB918DB3E9B00FDF8B8 /* AppDelegate.m in Sources */,
 				75BD7A4018EAFF5200F93BE1 /* OS.m in Sources */,
 				75CC2DE218DB95C200FDF8B8 /* AdvancedPanel.m in Sources */,
@@ -480,7 +508,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Casper NetInstall Image Creator";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx10.11;
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};
@@ -497,7 +525,7 @@
 				INFOPLIST_FILE = "CasperNetInstallCreator/CasperNetInstallCreator-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "Casper NetInstall Image Creator";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx10.11;
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};
