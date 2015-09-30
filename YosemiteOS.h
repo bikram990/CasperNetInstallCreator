@@ -10,4 +10,6 @@
 
 @interface YosemiteOS : OS
 
+@property NSString* minorOSVersion;
+
 @end

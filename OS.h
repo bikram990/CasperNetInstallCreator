@@ -16,9 +16,8 @@
 @property NSString *kernelPath;
 @property CasperNetinstallOptions *options;
 
-
 -(void)create; // calls copyLaunchDaemons and createNetinstallLaunchpad methods at this level, the lower level will call super then do whatever it needs to do
--(id)initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion;
+-(id)initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion andMinorVersion:(NSString*)minorOSVersion;
 -(void)configureLaunchBehavior;
 -(void) copyPostPreInstallWS;
 

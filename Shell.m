@@ -62,7 +62,7 @@ static AuthorizationRef authref = NULL;
     
     //256 = Command succeeded, but return value shifted too many bits
     //65280 = Same as above
-    if ((err != noErr || status != noErr) && status != 65280 && status != 256)
+    if ((err != noErr || status != noErr) && status != 65280 && status != 256 && status != 4096 && status != -60008)
     {
         NSLog(@"Error %d %d for command %@", err, status, command);
         

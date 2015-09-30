@@ -66,8 +66,10 @@
     osVersion = [osVersion stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     NSArray *osVersionArray = [osVersion componentsSeparatedByString:@"."];
     osVersion = [NSString stringWithFormat:@"%@.%@", osVersionArray[0], osVersionArray[1]];
+    NSString *minorOSVersion = osVersionArray.count > 2 ? osVersionArray[2]:@"0";
+    NSLog(@"Minor Version: %@", minorOSVersion);
     
-    [self createOS:osVersion andOptions:options];
+    [self createOS:osVersion andOptions:options andMinorVersion:minorOSVersion];
 
     
     
@@ -241,13 +243,13 @@
 }
 
 // identify and declare the OS Implementation
--(void)createOS:(NSString*)osVersion andOptions:(CasperNetinstallOptions *)options {
+-(void)createOS:(NSString*)osVersion andOptions:(CasperNetinstallOptions *)options andMinorVersion:(NSString*)minorVersion {
     if([osVersion isEqualToString:@"10.10"]){
-        self.os = [[YosemiteOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
+        self.os = [[YosemiteOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion andMinorVersion:minorVersion];
     } else if ([osVersion isEqualToString:@"10.11"]) {
-        self.os = [[CapitanOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
+        self.os = [[CapitanOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion andMinorVersion:minorVersion];
     } else {
-        self.os = [[MavericksOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion];
+        self.os = [[MavericksOS alloc] initWithPath:self.mountPath andOptions:options andVersion:osVersion andMinorVersion:minorVersion];
     }
 
 }

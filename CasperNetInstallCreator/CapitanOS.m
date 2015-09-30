@@ -11,9 +11,9 @@
 
 @implementation CapitanOS
 
--(id) initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion {
+-(id) initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion andMinorVersion:(NSString *)minorOSVersion{
     
-    self = [super initWithPath:path andOptions:options andVersion:osVersion];
+    self = [super initWithPath:path andOptions:options andVersion:osVersion andMinorVersion:minorOSVersion];
     
     // for now, this is the only change we need to make
     self.kernelPath = @"/System/Library/Kernels/kernel";

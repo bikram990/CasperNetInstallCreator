@@ -17,7 +17,7 @@ AppDelegate *delegate;
 @synthesize kernelPath;
 @synthesize options;
 
--(id)initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion{
+-(id)initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion andMinorVersion:(NSString *)minorOSVersion{
     // grab access to our delegate
     delegate = (AppDelegate *)[[NSApplication sharedApplication] delegate];
     self.osIdentifier = osVersion;
