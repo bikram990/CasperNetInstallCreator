@@ -1,14 +1,15 @@
 //
-//  YosemiteOS.m
+//  CapitanOS.m
 //  CasperNetInstallCreator
 //
-//  Created by Justin Feiock on 10/1/14.
-//  Copyright (c) 2014 JAMF Software. All rights reserved.
+//  Created by Justin Feiock on 9/22/15.
+//  Copyright © 2015 JAMF Software. All rights reserved.
 //
 
-#import "YosemiteOS.h"
+#import "CapitanOS.h"
+#import "Shell.h"
 
-@implementation YosemiteOS
+@implementation CapitanOS
 
 -(id) initWithPath:(NSString *)path andOptions:(CasperNetinstallOptions *)options andVersion:(NSString *)osVersion {
     
@@ -18,11 +19,6 @@
     self.kernelPath = @"/System/Library/Kernels/kernel";
     
     return self;
-}
-
--(void)configureLaunchBehavior{
-    [super configureLaunchBehavior];
-    [super copyPostPreInstallWS];
 }
 
 @end

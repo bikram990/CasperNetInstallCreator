@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.fsevents.matching</key>
+		<dict>
+			<key>NetworkdManagedSysctlSettingsChanged</key>
+			<dict>
+				<key>Path</key>
+				<string>/Library/Managed Preferences/mobile/com.apple.networkd.sysctl.plist</string>
+			</dict>
+			<key>NetworkdSysctlSettingsChanged</key>
+			<dict>
+				<key>Path</key>
+				<string>/Library/Preferences/com.apple.networkd.sysctl.plist</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.networkd_privileged</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.networkd_privileged</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/networkd_privileged</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

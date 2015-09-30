@@ -65,7 +65,7 @@ AppDelegate *delegate;
     [Shell execute:[NSString stringWithFormat:@"/bin/mkdir -p -m 755 '%@/System/Installation'", self.mountPath]];
     
     // Copy rc.install
-    [Shell execute:[NSString stringWithFormat:@"/usr/bin/ditto -rsrc '%@/rc.install' '%@/private/etc/rc.install'", [[NSBundle mainBundle] resourcePath], self.mountPath]];
+    [Shell execute:[NSString stringWithFormat:@"/usr/bin/ditto -rsrc '%@/rc.install.%@' '%@/private/etc/rc.install'", [[NSBundle mainBundle] resourcePath], self.osIdentifier, self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/bin/chmod 755 '%@/private/etc/rc.install'", self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/sbin/chown root:wheel '%@/private/etc/rc.install'", self.mountPath]];
     
@@ -74,11 +74,13 @@ AppDelegate *delegate;
     [Shell execute:[NSString stringWithFormat:@"/bin/chmod 755 '%@/private/etc/rc.cdrom'", self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/sbin/chown root:wheel '%@/private/etc/rc.cdrom'", self.mountPath]];
     
+}
+
+-(void) copyPostPreInstallWS{
     // Copy rc.cdrom.preWS
     [Shell execute:[NSString stringWithFormat:@"/usr/bin/ditto -rsrc '%@/rc.cdrom.preWS' '%@/private/etc/rc.cdrom.preWS'", [[NSBundle mainBundle] resourcePath], self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/bin/chmod 755 '%@/private/etc/rc.cdrom.preWS'", self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/sbin/chown root:wheel '%@/private/etc/rc.cdrom.preWS'", self.mountPath]];
-
     
     // Configure scripts to launch Casper Imaging
     NSString *script = [NSString stringWithContentsOfFile:[NSString stringWithFormat:@"%@/rc.cdrom.postWS.Terminal", [[NSBundle mainBundle] resourcePath]] encoding:NSUTF8StringEncoding error:nil];
@@ -86,12 +88,11 @@ AppDelegate *delegate;
     [script writeToFile:[NSString stringWithFormat:@"%@/rc.cdrom.postWS", [[NSBundle mainBundle] resourcePath]] atomically:YES encoding:NSUTF8StringEncoding error:nil];
     [Shell execute:[NSString stringWithFormat:@"/usr/bin/ditto -rsrc '%@/rc.cdrom.postWS' '%@/private/etc/rc.cdrom.postWS'", [[NSBundle mainBundle] resourcePath], self.mountPath]];
     
-    
     // set the permissions...
     [Shell execute:[NSString stringWithFormat:@"/bin/chmod 755 '%@/private/etc/rc.cdrom.postWS'", self.mountPath]];
     [Shell execute:[NSString stringWithFormat:@"/usr/sbin/chown root:wheel '%@/private/etc/rc.cdrom.postWS'", self.mountPath]];
-}
 
+}
 
 
 -(void)cleanFiles {

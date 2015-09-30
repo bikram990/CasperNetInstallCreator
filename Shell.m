@@ -82,6 +82,7 @@ static AuthorizationRef authref = NULL;
             
             if ([command rangeOfString:@"-puppetstrings"].location != NSNotFound) {
                 if (c == '\n') {
+//                    NSLog(@"Found result: %@", result);
                     if ([result rangeOfString:@"PERCENT:"].location != NSNotFound) {
                         [controller updateProgressPercent:[[result substringFromIndex:8] doubleValue]];
                     }
