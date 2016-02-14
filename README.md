@@ -1,8 +1,8 @@
 CasperNetInstallCreator
 =======================
 
-Binary form can be found at: 
- http://content.jamfcloud.com/Casper_NetInstall_Image_Creator_5.0.zip
+Releases including binaries can be found at https://github.com/jamf/CasperNetInstallCreator/releases
+ 
 
 ##Overview
 
